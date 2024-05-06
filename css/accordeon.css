@@ -1,0 +1,140 @@
+/* =============ACCORDEON && TABS======================================== */
+.tabs {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 25px;
+  
+    padding-bottom: 10px;
+  }
+
+  .tabs__link {
+    display: block;
+    border-radius: 100px;
+    padding: 14px 25px;
+    transition: var(--transition);
+    background: var(--main-bg-color);
+    box-shadow: 0 4px 20px 0 rgba(206, 195, 185, 0.3);
+  }
+  .tabs__link:hover {
+    box-shadow: 0 4px 20px 0 rgba(206, 195, 185, 0.3);
+    background: var(--elements-bg-color);
+  }
+  .tabs__link--active {
+    box-shadow: 0 4px 20px 0 rgba(206, 195, 185, 0);
+    background: var(--elements-bg-color);
+  }
+  .tab__content {
+    display: none;
+    transition: all 0.4s;
+    margin-bottom: 30px;
+  }
+  .tab__content.tab__content--show {
+    display: block;
+  }
+  
+  .accordeon {
+    border: 1px solid var(--accent-1);
+    border-radius: var(--border-radius);
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 30px;
+    background: var(--main-bg-color);
+  }
+  .accordeon.accordeon__content-show {
+    padding-bottom: 40px;
+  }
+  .accord__button {
+    padding: 40px 30px;
+    width: 100%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+    transition: var(--transition);
+  }
+  
+  .accordeon__content-show .accord__button {
+    padding-bottom: 20px;
+  }
+  
+  .accord__button:hover .accord__button-arrow {
+    background: var(--accent-1);
+  }
+  .accord__button-arrow svg {
+    transition: var(--transition);
+  }
+  .accord__button:hover .accord__button-arrow path {
+    fill: var(--main-bg-color);
+  }
+  .accord__button:hover .accord__button-arrow svg {
+    transform: rotate(90deg);
+  }
+  .accordeon__content-show .accord__button-arrow {
+    background: var(--accent-1);
+  }
+  .accordeon__content-show .accord__button-arrow path {
+    fill: var(--main-bg-color);
+  }
+  .accordeon__content-show .accord__button-arrow svg {
+    transform: rotate(90deg);
+  }
+  
+  .accord__title {
+    text-align: left;
+    font-family: "Gabriola", sans-serif;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 0.9;
+    color: var(--titles-color);
+  }
+  .accord__button-arrow {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1.5px solid #ffa55c;
+    transition: var(--transition);
+  }
+  .accordeon__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 20px auto;
+    gap: 20px 20px;
+    padding: 0 30px;
+    max-height: 0;
+    transition: var(--transition);
+  }
+  
+  .accordeon__content-theme {
+    line-height: 1.6;
+    text-transform: uppercase;
+    color: var(--accent-2);
+  }
+
+  .accordeon__content-item {
+    margin-bottom: 20px;
+    display: flex;
+  }
+  .accordeon__content-item:last-child {
+    margin-bottom: 0;
+  }
+  .accordeon__content-item-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    border: 1px solid var(--accent-2);
+    margin-right: 8px;
+  }
+  .accordeon__content-text {
+    max-width: 260px;
+  }
+  
